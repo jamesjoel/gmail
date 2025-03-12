@@ -2,6 +2,7 @@ let allMail =
      [
       {
         "id": "1",
+        "name": "John Doe",
         "from": "john.doe@example.com",
         "to": "you@example.com",
         "subject": "Meeting at 3 PM",
@@ -14,6 +15,7 @@ let allMail =
       },
       {
         "id": "2",
+        "name": "Jane Smith",
         "from": "jane.smith@example.com",
         "to": "you@example.com",
         "subject": "Project Deadline Extended",
@@ -26,6 +28,7 @@ let allMail =
       },
       {
         "id": "3",
+        "name": "Random Company",
         "from": "team@example.com",
         "to": "you@example.com",
         "subject": "Weekly Status Report",
@@ -38,6 +41,7 @@ let allMail =
       },
       {
         "id": "4",
+        "name": "Hirendra Gurnani",
         "from": "you@example.com",
         "to": "client@example.com",
         "subject": "Proposal Submission",
@@ -47,9 +51,305 @@ let allMail =
         "is_read": true,
         "labels": ["Sent", "Work"],
         "mail_status" : 2
-      },
+      }
+      ,
       {
         "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
+        "from": "you@example.com",
+        "to": "manager@example.com",
+        "subject": "Meeting Notes",
+        "snippet": "Draft of the meeting notes...",
+        "body": "Hi,\n\nHere's a draft of the meeting notes. Let me know if any changes are needed.\n\nThanks,\nYou",
+        "timestamp": "2025-03-10T08:20:00Z",
+        "is_read": false,
+        "labels": ["Draft", "Work"],
+        "mail_status" : 2
+      }
+      ,
+      {
+        "id": "5",
+        "name": "Devesh Gautam",
         "from": "you@example.com",
         "to": "manager@example.com",
         "subject": "Meeting Notes",
