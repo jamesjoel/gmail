@@ -1,35 +1,49 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React from "react";
+import { useSelector } from "react-redux";
+import TopNav from "./TopNav";
+import Compose_modal from "./Compose_modal";
+
 
 const Sidebar = () => {
-
-  let allMail = useSelector(state=>state.MailReducer);
-  let counter=0;
-  allMail.forEach(item=>{
-    if(item.mail_status==2){
+  let allMail = useSelector((state) => state.MailReducer);
+  let counter = 0;
+  allMail.forEach((item) => {
+    if (item.mail_status == 2) {
       counter++;
     }
-  })
+  });
 
   return (
-    <div class="col-md-2 sidebar">
-      <button class="btn btn-danger mb-3">+ Compose</button>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Inbox ({counter})</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sent</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Drafts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Trash</a>
-        </li>
-      </ul>
-    </div>
-  )
-}
+    <>
+    <TopNav/>
+      <div className="col-md-2 sidebar">
+        <button className="btn btn-danger mb-3" type="button" data-bs-toggle="modal" data-bs-target="#compose_mail">+ Compose</button>
+        <ul className="nav flex-column">
+          <li className="nav-item">
+            <a className="nav-link active" href="#">
+              Inbox ({counter})
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Sent
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Drafts
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Trash
+            </a>
+          </li>
+        </ul>
+      </div>
+      <Compose_modal/>
+    </>
+  );
+};
 
-export default Sidebar
+export default Sidebar;

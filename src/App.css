@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
+  font-family: "Montserrat", sans-serif;
 }
 .sidebar {
   background-color: #f1f3f4;
@@ -11,10 +12,17 @@ body {
   text-align: left;
   font-weight: 500;
 }
+.notifications{
+  width: 60px;
+  margin-top: 10px;
+}
 .inbox-list {
   overflow-y: auto;
   height: calc(100vh - 56px);
   border-right: 1px solid #dee2e6;
+}
+.inbox-list::-webkit-scrollbar, body::-webkit-scrollbar{
+  display: none;
 }
 .email-item {
   padding: 12px;
