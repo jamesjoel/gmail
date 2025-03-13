@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import TopNav from "./TopNav";
 import Compose_modal from "./Compose_modal";
+import { NavLink } from "react-router-dom";
 
 
 const Sidebar = () => {
@@ -20,24 +21,24 @@ const Sidebar = () => {
         <button className="btn btn-danger mb-3" type="button" data-bs-toggle="modal" data-bs-target="#compose_mail">+ Compose</button>
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a className="nav-link active" href="#">
+            <NavLink className="nav-link active" to="/">
               Inbox ({counter})
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="sentitems">
               Sent
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="drafts">
               Drafts
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="trash">
               Trash
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>

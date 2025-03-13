@@ -1,10 +1,11 @@
 body {
   /* font-family: Arial, sans-serif; */
   font-family: "Montserrat", sans-serif;
+  background-color: #f1f3f4;
 }
 .sidebar {
   background-color: #f1f3f4;
-  height: 100vh;
+  height: max-content;
   padding: 10px;
 }
 .sidebar .btn {
@@ -13,20 +14,28 @@ body {
   font-weight: 500;
 }
 .notifications{
-  width: 60px;
+  width: 65px;
   margin-top: 10px;
+}
+.notifications svg{
+  background-color: #dee2e6;
+  padding: 5px;
+  transition: background-color 0.5s;
+}
+.notifications svg:hover{
+  background-color: white;
 }
 .inbox-list {
   overflow-y: auto;
   height: calc(100vh - 56px);
-  border-right: 1px solid #dee2e6;
+  /* border-right: 1px solid #dee2e6; */
 }
 .inbox-list::-webkit-scrollbar, body::-webkit-scrollbar{
   display: none;
 }
 .email-item {
   padding: 12px;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #858585bc;
   cursor: pointer;
   transition: background-color 0.2s;
 }

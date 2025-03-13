@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+src/components/ShowMail.jsx
+src/components/test.jsx
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

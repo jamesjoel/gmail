@@ -1,47 +1,89 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useSelector } from "react-redux";
+// import { data } from "react-router-dom";
 
 const TopNav = () => {
+  let allMail = useSelector((state) => state.MailReducer);
+  const [searchMail, setSearchMail] = useState([]);
   const notifRef = useRef();
-  let notifToggle = () => {
-    console.log(notifRef.current.style);
-    // return
+  const searchRef = useRef();
 
+  //Notification toggle button programming
+  let notifToggle = () => {
     if (notifRef.current.style.display === "") {
       notifRef.current.style.display = "none";
     } else {
       notifRef.current.style.display = "";
     }
   };
-  let allMail = useSelector((state) => state.MailReducer);
-  console.log(allMail);
+
+  const autoComp = (searchString) => {
+    setSearchMail(
+      allMail.filter((item) =>
+        item.name.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.to.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.from.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.subject.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.body.toLowerCase().includes(searchString.toLowerCase())
+      )
+    );
+
+    // Show/hide dropdown based on whether there's a search string
+    searchRef.current.style.display = searchString ? "" : "none";
+  };
 
   return (
     <div className="container" style={{ backgroundColor: "#F1F3F4" }}>
-      <div className="row justify-content-between">
+      <div className="row justify-content-between align-items-center">
         {/* <nav className="navbar"> */}
-        <span className="navbar-brand col-md-2 fs-1">TSS Mail</span>
-        <div className="col-md-5 mt-2">
+        <span className="navbar-brand col-md-2 col-sm-0 fs-1">TSS Mail</span>
+        <div className="col-md-5 col-10">
           <form className="d-flex">
             <div className="input-group">
               <input
                 className="form-control form-control-lg"
                 type="search"
-                placeholder="Search"
+                placeholder="Search mail"
+                onChange={(e) => autoComp(e.target.value)}
                 aria-label="Search"
               />
               <button className="btn btn-primary px-4" type="submit">
-                <i className="bi bi-search"></i>
+                <i className="bi fs-5 bi-search"></i>
               </button>
             </div>
           </form>
+          <div
+            ref={searchRef}
+            onBlur={()=>{
+              if(searchRef.current.style.display===""){
+                searchRef.current.style.display==="none"
+              }
+            }}
+            className="search-dropdown col-md-4 bg-white border rounded-4 p-3"
+            style={{
+              zIndex: 99999,
+              position: "absolute",
+              display: "none",
+              minHeight: "200px",
+              maxHeight: "600px",
+              overflowY: "auto",
+            }}
+          >
+            <ul className="list-group">
+              {/* <li className="list-group-item">{searchMail.name}</li> */}
+              {searchMail.map((item) => (
+                <li className="list-group-item"><h5>{item.name}</h5><p><b>Subject:</b> {item.subject}</p></li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div
-          className="notifications col-md-2 text-center cursor-pointer"
+          className="notifications col-md-1 text-center cursor-pointer"
           style={{ cursor: "pointer" }}
           onClick={notifToggle}
         >
           <svg
+            className="border rounded-3"
             viewBox="0 0 24 24"
             id="_24x24_On_Light_Notification-Alert"
             xmlns="http://www.w3.org/2000/svg"
@@ -68,39 +110,18 @@ const TopNav = () => {
             )}
           </svg>
           {/* <div
-            className="notification-dropdown col-md-3 mt-4 border rounded-4 p-3"
-            style={{
-            //   zIndex: 99999999999,
-              position: "absolute",
-              right: 0,
-              backgroundColor: "#F1F3F4",
-              display:"none",
-              height:"600px",
-            }}
-            ref={notifRef}
-          >
-            {allMail.map((item) =>
-              item.mail_status == 2 ? (
-                <div class="alert text-start alert-primary" style={{zIndex:0}} role="alert">
-                  <h6>You have a mail from {item.name}</h6>
-                  <p className="text-start">Subject: {item.subject}</p>
-                  <p className="text-end">{item.timestamp}</p>
-                </div>
-              ) : ""
-            )}
-          </div> */}
-          {/* <div
             className="mt-5 border rounded-4"
             style={{ position: "relative" }}
             > */}
           <div
-            className="notification-dropdown p-3"
+            className="notification-dropdown p-3 mt-3 border rounded"
             style={{
               position: "absolute",
               right: 0,
               backgroundColor: "#F1F3F4",
               display: "none",
-              height: "600px",
+              minHeight: "200px",
+              maxHeight: "600px",
               overflowY: "auto", // Prevent content overflow
             }}
             ref={notifRef}
@@ -113,15 +134,13 @@ const TopNav = () => {
                   role="alert"
                 >
                   <h6>You have a mail from {item.name}</h6>
-                  <p className="text-start">Subject: {item.subject}</p>
-                  <p className="text-end">{item.timestamp}</p>
+                  {/* <p className="text-start">Subject: {item.subject}</p>
+                  <p className="text-end">{item.timestamp}</p> */}
                 </div>
               ) : null
             )}
           </div>
-          {/* </div> */}
         </div>
-        {/* </nav> */}
       </div>
     </div>
   );
