@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { changReadStatus } from '../redux/MailSlice';
+import useSnippet from '../hooks/useSnippet';
 
 const Mail = ({data}) => {
   let dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Mail = ({data}) => {
             <span class="email-time">{data.timestamp}</span>
           </div>
           <div>{data.subject}</div>
-          <small class="text-muted">{data.snippet}</small>
+          <small class="text-muted">{useSnippet(data.body)}</small>
         </div>
     </div>
   )

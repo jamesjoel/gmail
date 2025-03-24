@@ -19,6 +19,9 @@ let MailSlice = createSlice({
             })
 
             // console.log(arr);
+        },
+        sendMail(state, action){
+            state.push(action.payload);
         }
     }
 
@@ -26,4 +29,4 @@ let MailSlice = createSlice({
 
 
 export default MailSlice.reducer;
-export let {changReadStatus} = MailSlice.actions;
+export let {changReadStatus, sendMail} = MailSlice.actions;

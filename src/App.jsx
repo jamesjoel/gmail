@@ -16,6 +16,7 @@ const App = () => {
             <Routes>
                 <Route index element={<Navigate to="/inbox" />} />
                 <Route path='inbox' element={<Inbox />} />
+                <Route path='sent' element={<SentItems />} />
                 <Route path='inbox/:id' element={<ViewMail />} />
                 <Route path='drafts' element={<Drafts />} />
                 <Route path='sentitems' element={<SentItems />} />

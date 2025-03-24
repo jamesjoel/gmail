@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
+import Compose from './Compose';
 
 const Sidebar = () => {
 
@@ -22,7 +23,7 @@ const Sidebar = () => {
           <NavLink className="nav-link" to="/inbox">Inbox ({counter})</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Sent</a>
+        <NavLink className="nav-link" to="/sent">Sent</NavLink>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Drafts</a>
@@ -34,7 +35,7 @@ const Sidebar = () => {
       {
         showCompose 
         ?
-        <div style={{position : "absolute", bottom : 0, right : "20px", height : "400px", width : "700px", backgroundColor : "#fff", boxShadow : "0px 0px 10px #000", borderRadius : "10px"}}></div>
+        <Compose setShowCompose={setShowCompose} />
         :
         ''
       }
