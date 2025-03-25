@@ -1,13 +1,21 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import Compose from './Compose';
+import {getStu} from '../redux/StudentSlice'
 
 const Sidebar = () => {
+
+  let dispatch = useDispatch();
+
+  let hello = ()=>{
+    dispatch(getStu());
+  }
 
   let [showCompose, setShowCompose] = useState(false);
 
   let allMail = useSelector(state=>state.MailReducer);
+  let allStu = useSelector(state=>state.StudentReducer)
   let counter=0;
   allMail.forEach(item=>{
     if(item.mail_status==2){
@@ -31,7 +39,11 @@ const Sidebar = () => {
         <li className="nav-item">
           <a className="nav-link" href="#">Trash</a>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/demo">Demo ({allStu.length})</NavLink>
+        </li>
       </ul>
+      <button onClick={hello} className='btn btn-info'>Hello</button>
       {
         showCompose 
         ?

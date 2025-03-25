@@ -8,7 +8,14 @@ import Trash from './pages/Trash'
 import Sidebar from './components/Sidebar'
 import ViewMail from './pages/ViewMail'
 import { Navigate } from 'react-router-dom'
+import Demo from './pages/Demo'
+// import { useDispatch } from 'react-redux'
+// import {getStu} from './redux/StudentSlice'
+
 const App = () => {
+  
+
+
   return (
     <div class="container-fluid">
         <div class="row">
@@ -20,6 +27,7 @@ const App = () => {
                 <Route path='inbox/:id' element={<ViewMail />} />
                 <Route path='drafts' element={<Drafts />} />
                 <Route path='sentitems' element={<SentItems />} />
+                <Route path='demo' element={<Demo />} />
                 <Route path='trash' element={<Trash />} />
             </Routes>        
         </div>
