@@ -6,8 +6,10 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import {configureStore, combineReducers} from '@reduxjs/toolkit'
 import MailReducer from './redux/MailSlice'
+import StudentReducer from './redux/Student.jsx'
 
-let rootReducer = combineReducers({ MailReducer })
+
+let rootReducer = combineReducers({ MailReducer , StudentReducer })
 let store = configureStore({
   reducer : rootReducer
 })
