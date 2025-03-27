@@ -65,6 +65,14 @@ const Demo = () => {
                 </div>
 
                 <div className='col-md-8'>
+                {
+                    allStu.length == 0
+                    ?
+                    <div class="alert alert-danger" role="alert">
+                    No data found ........!
+                    </div>
+                    :
+                    <>
                     <table className='table table-danger'>
                         <thead>
                             <tr>
@@ -74,7 +82,14 @@ const Demo = () => {
                                 <th>FEE</th>
                                 <th>DELETE</th>
                                 <th>EDIT</th>
-                                <th>CHECKBOX</th>
+                                {
+                                    allStu.length > 1 
+                                    ?
+                                    <th>CHECKBOX</th>
+                                    :
+                                    ""
+
+                                }
                             </tr>
                         </thead>
                         <tbody>
@@ -86,14 +101,32 @@ const Demo = () => {
                                     <td>{item.fee}</td>
                                     <td> <button onClick={() => del(item)} className='btn btn-danger'>del</button></td>
                                     <td> <button onClick={() => edit(item)} className='btn btn-info'>edit</button></td>
-                                    <td><input type="checkbox" checked={checkedItems.includes(item.id)} onChange={() => handleCheckboxChange(item)} className='form-check-input' /></td>
+                                    {
+                                        allStu.length > 1
+                                        ?
+                                        <td><input type="checkbox" checked={checkedItems.includes(item.id)} onChange={() => handleCheckboxChange(item)} className='form-check-input' /></td>
+                                        :
+                                        ""
+                                        
+                                    }
 
                                 </tr>)
                             }
                         </tbody>
 
                     </table>
+
+                {
+                    checkedItems.length  > 1
+                    ?
                     <button onClick={deleteSelectedItems} className='btn btn-danger'>Delete Selected</button>
+                    :
+                    ""
+                }
+                  </>
+                    
+                }
+
                 </div>
             </div>
         </>
