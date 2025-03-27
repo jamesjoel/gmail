@@ -1,0 +1,22 @@
+{
+  "student": [
+    {
+      "id": "b76e",
+      "name": "ram",
+      "age": "15",
+      "fee": "1500"
+    },
+    {
+      "id": "fe8d",
+      "name": "shyam",
+      "age": "25",
+      "fee": "7800"
+    },
+    {
+      "id": "54fb",
+      "name": "amit",
+      "age": "18",
+      "fee": "1700"
+    }
+  ]
+}
